@@ -16,7 +16,7 @@ from buildhub.utils import (
 from kinto_http import cli_utils
 
 
-ARCHIVE_URL = "https://archive.mozilla.org/pub/"
+ARCHIVE_URL = os.getenv("ARCHIVE_URL", "https://archive.mozilla.org")
 PRODUCTS = ("fennec", "firefox", "thunderbird")
 DEFAULT_SERVER = "https://kinto-ota.dev.mozaws.net/v1"
 DEFAULT_BUCKET = "build-hub"
@@ -136,7 +136,7 @@ def archive(product, version, platform, locale, url, size, date, metadata=None):
 def archive_url(product, version=None, platform=None, locale=None, nightly=None, candidate=None):
     product = product if product != "fennec" else "mobile"
 
-    url = ARCHIVE_URL + product
+    url = ARCHIVE_URL + "/pub/" + product
     if nightly:
         url += "/nightly/" + nightly + "/"
     elif candidate:
