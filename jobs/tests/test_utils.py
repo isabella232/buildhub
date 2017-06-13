@@ -236,6 +236,25 @@ RECORDS = [
             "mozilla-central-android-x86-old-id/fennec-55.0a1.multi.android-i386.apk",
         }
     },
+
+    # Fennec maemo5-gtk
+    {
+        "id": "fennec_5-0_linux-gnueabi-arm_multi",
+        "source": {
+            "product": "fennec",
+        },
+        "target": {
+            "version": "5.0",
+            "platform": "linux-gnueabi-arm",
+            "locale": "multi",
+            "channel": "release"
+        },
+        "download": {
+            "url": "https://archive.mozilla.org/pub/mobile/releases/5.0/maemo5-gtk/multi/"
+            "fennec-5.0.en-US.linux-gnueabi-arm.tar.bz2",
+        }
+    },
+
 ]
 
 
