@@ -14,11 +14,11 @@ body {
   padding: 20px 0 20px 15px;
 }
 
-.sk-panel__content {
+/* .sk-panel__content {
   max-height: 300px;
   overflow-y: auto;
   padding-right: 10px;
-}
+} */
 
 table a {
   text-decoration: none;

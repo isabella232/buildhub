@@ -20,6 +20,10 @@ import {
 } from "searchkit";
 
 import {
+  RefinementAutosuggest
+} from "@searchkit/refinement-autosuggest"
+
+import {
   Layout,
   TopBar,
   LayoutBody,
@@ -225,47 +229,42 @@ class App extends Component {
 
             <LayoutBody>
               <SideBar>
-                <RefinementListFilter
+                <RefinementAutosuggest
                   field="target.version"
-                  title="Version"
+                  title="Version"                  
                   id="versions"
-                  size={1000}
+                  size={10}
                   operator="OR"
                   orderKey="_term"
-                  orderDirection="desc"
-                  listComponent={ItemCheckboxList}
-                  bucketsTransform={sortVersions}
-                  translations={{ All: "All versions" }}
+                  orderDirection="desc"  
+                  multi={true}   
                 />
-                <RefinementListFilter
+                <RefinementAutosuggest
                   field="target.platform"
                   title="Platform"
                   id="platform"
-                  size={1000}
+                  size={10}
                   operator="OR"
-                  orderKey="_term"
-                  listComponent={ItemCheckboxList}
-                  translations={{ All: "All platforms" }}
+                  orderKey="_term"     
+                  multi={true}                               
                 />
-                <RefinementListFilter
+                <RefinementAutosuggest
                   field="target.channel"
                   title="Channel"
                   id="channel"
-                  size={1000}
+                  size={10}
                   operator="OR"
-                  orderKey="_term"
-                  listComponent={ItemCheckboxList}
-                  translations={{ All: "All channels" }}
+                  orderKey="_term"     
+                  multi={true}                               
                 />
-                <RefinementListFilter
+                <RefinementAutosuggest
                   field="target.locale"
                   title="Locale"
                   id="locale"
-                  size={1000}
+                  size={10}
                   operator="OR"
                   orderKey="_term"
-                  listComponent={ItemCheckboxList}
-                  translations={{ All: "All locales" }}
+                  multi={true}                  
                 />
               </SideBar>
 
