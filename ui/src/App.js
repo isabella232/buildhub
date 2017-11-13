@@ -7,12 +7,10 @@ import {
   NoHits,
   Hits,
   HitsStats,
-  ItemCheckboxList,
   SortingSelector,
   SelectedFilters,
   MenuFilter,
   Pagination,
-  RefinementListFilter,
   ResetFilters,
   SearchkitManager,
   SearchkitProvider,
@@ -195,7 +193,7 @@ class App extends Component {
                 <RefinementAutosuggest
                   field="target.version"
                   title="Version"
-                  id="versions"
+                  git id="versions"
                   size={20}
                   operator="OR"
                   multi={true}
