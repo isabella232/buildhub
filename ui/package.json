@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@searchkit/refinement-autosuggest": "0.0.1-5",
+    "@searchkit/refinement-autosuggest": "0.0.1-6",
     "css-animation": "<1.4.0",
     "filesize": "^3.5.10",
     "react": "^15.5.4",
