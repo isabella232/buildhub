@@ -68,8 +68,8 @@ const HitsTable = ({ hits }) => {
             }) => {
               const revisionUrl = source.revision
                 ? <a href={`${source.repository}/rev/${source.revision}`}>
-                    {source.revision.substring(0, 6)}
-                  </a>
+                  {source.revision.substring(0, 6)}
+                </a>
                 : "";
               const getHighlight = (title, value) => {
                 return { __html: (highlight && highlight[title]) || value };
@@ -194,32 +194,32 @@ class App extends Component {
               <SideBar>
                 <RefinementAutosuggest
                   field="target.version"
-                  title="Version"                  
+                  title="Version"
                   id="versions"
                   size={20}
                   operator="OR"
-                  multi={true}   
+                  multi={true}
                 />
                 <RefinementAutosuggest
                   field="target.platform"
                   title="Platform"
                   id="platform"
                   size={20}
-                  multi={true}                               
+                  multi={true}
                 />
                 <RefinementAutosuggest
                   field="target.channel"
                   title="Channel"
                   id="channel"
                   size={20}
-                  multi={true}                               
+                  multi={true}
                 />
                 <RefinementAutosuggest
                   field="target.locale"
                   title="Locale"
                   id="locale"
                   size={20}
-                  multi={true}                  
+                  multi={true}
                 />
               </SideBar>
 
@@ -274,10 +274,10 @@ class App extends Component {
                 <NoHits
                   translations={{
                     "NoHits.NoResultsFound":
-                      "No release found were found for {query}",
+                    "No release found were found for {query}",
                     "NoHits.DidYouMean": "Search for {suggestion}",
                     "NoHits.SearchWithoutFilters":
-                      "Search for {query} without filters",
+                    "Search for {query} without filters",
                   }}
                   suggestionsField="target.version"
                 />
